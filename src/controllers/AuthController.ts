@@ -30,6 +30,7 @@ class AuthController {
   logout() {
     this.api.logout()
       .then(() => {
+        store.set('user', null);
         router.go('/');
       })
       .catch(console.log);

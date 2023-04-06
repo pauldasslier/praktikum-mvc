@@ -8,7 +8,6 @@ export enum StoreEvents {
 }
 
 type State = {
-  chats: User[];
   user: {
     data: null | User;
     isLoading: boolean;
@@ -22,7 +21,6 @@ const initialState: State = {
     isLoading: true,
     hasError: false,
   },
-  chats: [],
 };
 
 class Store extends EventBus {
